@@ -15,7 +15,7 @@ module FormsLab
     end
 
     post '/pirates' do
-      @pirate = Pirate.new(params[:pirate])
+      pirate = Pirate.new(params[:pirate])
       params[:pirate][:ships].each do |ship_attributes|
         ship = Ship.new(ship_attributes)
       end
